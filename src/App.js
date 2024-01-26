@@ -17,10 +17,10 @@ function App(){
   return (
     <div className="App">
        <ExpenseItem
-       expensedata={expenses[0]}
+       expenseData={expenses[0]}
        />
        <ExpenseItem
-       expensedata={expenses[1]}
+       expenseData={expenses[1]}
        />
     </div>
   );
