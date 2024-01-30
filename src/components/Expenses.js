@@ -15,7 +15,7 @@ function Expenses(){
   }
   ]
     return (
-      <Card className="card expenses">
+      <Card className="expenses">
          <ExpenseItem
          expenseData={expenses[0]}
          />
