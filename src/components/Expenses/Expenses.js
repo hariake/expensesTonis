@@ -1,6 +1,7 @@
 import "./Expenses.css"
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
+import ExpensesFilter from "./ExpensesFilter";
 const Expenses = () =>{
     const expenses =[
     {
@@ -14,15 +15,22 @@ const Expenses = () =>{
     price: 99.99
   }
   ]
+  const saveSelectedYearHandler = (selectedYear) => {
+    console.log(selectedYear)
+  }
+
     return (
-      <Card className="expenses">
-         <ExpenseItem
-         expenseData={expenses[0]}
-         />
-         <ExpenseItem
-         expenseData={expenses[1]}
-         />
+      <Card className='expenses'>
+          <ExpensesFilter
+            saveSelectedYear = {saveSelectedYearHandler} 
+          />
+          <ExpenseItem
+          expenseData = {expenses[0]}
+          />
+          <ExpenseItem
+          expenseData = {expenses[1]}
+          />
       </Card>
-    )
+  )
   }
   export default Expenses;
